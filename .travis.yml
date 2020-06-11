@@ -5,3 +5,7 @@ before_install:
     - docker build -t ashishyete/docker-react -f Dockerfile.dev .
 script:
     - docker run -e CI=true ashishyete/docker-react npm run test -- --coverage
+after_success: 
+    - docker build -t ashishyete/docker-react
+    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+    - docker push ashishyete/docker-react

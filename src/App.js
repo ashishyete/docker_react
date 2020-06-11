@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          <b>Hi From Docker -Ashish, Inside Master Branch!</b>
+          <b>Hi From Docker -Ashish, Inside Feature and then Branch -2!</b>
         </p>
         <a
           className="App-link"
