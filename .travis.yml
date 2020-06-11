@@ -8,3 +8,4 @@ script:
 after_success: 
     - docker build -t ashishyete/docker-react
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+    - docker push ashishyete/docker-react
